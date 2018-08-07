@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <script src="{{ url_for('static',filename='js/movie.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/pagination.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/movie.css') }}">
+{% endblock %}
+
+{% block title %}电影{% endblock %}
+
+{% block main %}
+    <div class="movie_pra">
+        {% for movie in movies %}
+            <div class="movie_mode">
+                <div class="image_div">
+                    <a href="{{ url_for('movies_do',movie_url=movie.href) }}"><img src="{{ movie.picsrc }}" alt="">
+                        <span class="name_mode">{{ movie.name }}</span>
+                        <span class="grade_mode">{{ movie.grade }}</span>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+<div id="pagination">
+            </div>
+{% endblock %}

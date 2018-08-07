@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/domovie.css') }}">
+{% endblock %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block main %}
+    <div id="a1" class="player">
+        <iframe id="player" width="100%" height="100%" allowfullscreen="true" scrolling="no" frameborder="0" border="0"
+                marginwidth="0" marginheight="0" src="{{ frame }}" frameborder="0">
+
+
+        </iframe>
+    </div>
+
+
+{% endblock %}

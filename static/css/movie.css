@@ -1,0 +1,22 @@
+.movie_mode{
+    height: 300px;
+    width: 240px;
+    float: left;
+    padding: 30px 2px 20px 20px;
+}
+.image_div{
+    margin: auto;
+    width: 190px;
+}
+.movie_pra{
+    overflow:hidden;
+}
+.name_mode{
+    float: left;
+    font-weight:600;
+}
+.grade_mode{
+    float: right;
+    font-weight:500;
+    color: darkred;
+}
